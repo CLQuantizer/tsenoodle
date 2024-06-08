@@ -25,5 +25,8 @@
     {/each}
 </div>
 <div>
-    Find us at 7 Gloucester Green, Oxford, OX1 2DF
+    Opens daily 12:00-21:00
+</div>
+<div>
+    Find us at 8 Ship St, Oxford OX1 3DA, United Kingdom
 </div>
