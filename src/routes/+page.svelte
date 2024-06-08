@@ -19,7 +19,7 @@
 </script>
 <div class="text-4xl">Welcome to Tse Noodle</div>
 <div>Authentic Chinese cuisine in the heart of Oxford</div>
-<Button> See menu </Button>
+<Button> See menu (under construction) </Button>
 <div class="grid grid-cols-2 gap-2">
     {#each imageLinks as imageLink}
         <div>
