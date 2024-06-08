@@ -12,9 +12,7 @@
 </script>
 <div class="text-4xl">Welcome to Tse Noodle</div>
 <div>Authentic Chinese cuisine in the heart of Oxford</div>
-<div class="flex gap-1 justify-evenly w-full my-2">
-    See menu
-</div>
+<Button> See menu </Button>
 <div class="grid grid-cols-2 gap-2">
     {#each imageLinks as imageLink}
         <div>
