@@ -9,6 +9,13 @@
         {name: 'Facebook', link: 'https://www.facebook.com/tsenoodle'},
         {name: 'TripAdvisor', link: 'https://www.tripadvisor.com/Restaurant_Review-g186361-d17851676-Reviews-Tse_Noodles-Oxford_Oxfordshire_England.html'},
     ]
+    // const items= [
+    //     App,煎肉餃子,Grill Pork Dumplings,6.00
+    // ]
+    // App,煎菜餃子,Grill Vege Dumplings,6.00
+    // App,炸春卷,Fried Spring Rolls,5.00
+    // App,炸雲吞,Fried Wanton,6.00
+
 </script>
 <div class="text-4xl">Welcome to Tse Noodle</div>
 <div>Authentic Chinese cuisine in the heart of Oxford</div>
