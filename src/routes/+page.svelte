@@ -3,7 +3,9 @@
 
     const imageLinks = [
         '/tofu.png','/person.png',
-        '/card.png','/3.png','/4.png',
+        '/card.png','/3.png','/4.png', "/5.png",
+        "/6.png","/7.png","/8.png","/9.png","/10.png",
+        "11.png","12.png","13.png","14.png"
     ]
     const socials = [
         {name: 'Facebook', link: 'https://www.facebook.com/tsenoodle'},
@@ -16,58 +18,58 @@
     let randomRice:any;
     let randomNoodle:any;
 
-    const randomRiceDish = () => {
-        randomRice = rice[Math.floor(Math.random() * rice.length)];
-    }
-    const randomNoodleDish = () => {
-        randomNoodle = nds[Math.floor(Math.random() * nds.length)];
-    }
+    const randomRiceDish = () => randomRice = rice[Math.floor(Math.random() * rice.length)];
+    const randomNoodleDish = () => randomNoodle = nds[Math.floor(Math.random() * nds.length)]
 </script>
-<div class="text-4xl">Welcome to Tse Noodle</div>
-<div class="my-2">Authentic Chinese cuisine in the heart of Oxford</div>
-<div class="flex gap-2">
-    <div>
-        <Button on:click={randomRiceDish}>
-            Random a rice dish
-        </Button>
-        {#if randomRice}
-            <div class="text-green-700">{randomRice.cn} - {randomRice.en}</div>
-        {/if}
-        <div class="font-bold">Rice Dishes</div>
-        {#each rice as item}
-            <div>{item.cn} - {item.en}</div>
-        {/each}
-    </div>
-    <div>
-        <Button on:click={randomNoodleDish}>
-            Random a noodle dish
-        </Button>
-        {#if randomNoodle}
-            <div class="text-green-700">{randomNoodle.cn} - {randomNoodle.en}</div>
-        {/if}
 
-        <div class="font-bold">Noodle Dishes</div>
-        {#each nds as nd}
-            <div>{nd.cn} - {nd.en}</div>
-        {/each}
-    </div>
-</div>
+<div class="container mx-auto flex flex-col justify-center items-center gap-2">
+    <div class="text-4xl">Welcome to Tse Noodle</div>
+    <div class="my-2">Authentic Chinese cuisine in the heart of Oxford<br>with more than 40 years of history.</div>
 
-<div class="grid grid-cols-2 gap-2">
-    {#each imageLinks as imageLink}
-        <div>
-            <img src={imageLink} alt="Tse Noodle" />
+    <div class="grid-cols-2 grid gap-2">
+        <div class="space-y-1.5">
+            <Button on:click={randomRiceDish}>
+                Random a rice dish
+            </Button>
+            {#if randomRice}
+                <div class="text-green-700">{randomRice.cn} - {randomRice.en}</div>
+            {/if}
+            <div class="font-bold">Rice Dishes</div>
+            {#each rice as item}
+                <div>{item.cn} - {item.en}</div>
+            {/each}
         </div>
-    {/each}
-</div>
-<div class="flex gap-1 justify-evenly w-full my-2">
-    {#each socials as social}
-        <Button href={social.link} target="_blank">{social.name}</Button>
-    {/each}
-</div>
-<div>
-    Opens daily 12:00-21:00
-</div>
-<div>
-    Find us at 8 Ship St, Oxford OX1 3DA, United Kingdom
+        <div class="space-y-1.5">
+            <Button on:click={randomNoodleDish}>
+                Random a noodle dish
+            </Button>
+            {#if randomNoodle}
+                <div class="text-green-700">{randomNoodle.cn} - {randomNoodle.en}</div>
+            {/if}
+
+            <div class="font-bold">Noodle Dishes</div>
+            {#each nds as nd}
+                <div>{nd.cn} - {nd.en}</div>
+            {/each}
+        </div>
+    </div>
+
+    <div class="grid grid-cols-4 gap-2">
+        {#each imageLinks as imageLink}
+            <div>
+                <img src={imageLink} alt="Tse Noodle" />
+            </div>
+        {/each}
+    </div>
+    <div class="flex gap-1 justify-evenly w-full my-2">
+        {#each socials as social}
+            <Button href={social.link} target="_blank">{social.name}</Button>
+        {/each}
+    </div>
+    <div>
+        Opens daily 12:00-21:00
+    </div>
+    <div>
+        Find us at 8 Ship St, Oxford OX1 3DA, United Kingdom
+    </div>
 </div>
