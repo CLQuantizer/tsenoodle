@@ -1,14 +1,35 @@
 <script lang="ts">
     import {Button} from "$lib/components/ui/button/index";
     import {IMAGE_ALTS, IMAGE_LINKS, MENU, SOCIALS} from "$lib/client/constants";
+    import ky from 'ky';
 
     const rice = MENU.filter(item => item.cat === 'rice')
     const nds = MENU.filter(item => item.cat === 'nd')
-    let randomRice:any;
-    let randomNoodle:any;
+    let randomRice: any;
+    let randomNoodle: any;
+    let userQuery = '';
+    let aiRecommendation = '';
+    let isLoading = false;
 
     const randomRiceDish = () => randomRice = rice[Math.floor(Math.random() * rice.length)];
-    const randomNoodleDish = () => randomNoodle = nds[Math.floor(Math.random() * nds.length)]
+    const randomNoodleDish = () => randomNoodle = nds[Math.floor(Math.random() * nds.length)];
+
+    async function getAiRecommendation() {
+        if (!userQuery.trim()) return;
+
+        isLoading = true;
+        try {
+            const response: { rec: string } = await ky.post('/ai', {
+                json: { text: userQuery }
+            }).json();
+            aiRecommendation = response.rec;
+        } catch (error) {
+            console.error('Error getting AI recommendation:', error);
+            aiRecommendation = "Sorry, Tse-AI's brother OPEN-AI is mean to us today. Please try again later.";
+        } finally {
+            isLoading = false;
+        }
+    }
 </script>
 
 <svelte:head>
@@ -28,7 +49,31 @@
             </p>
         </header>
 
-        <!-- Menu Section -->
+        <!-- Tse-AI Section -->
+        <div class="w-full max-w-2xl space-y-4 bg-white rounded-xl p-6 shadow-lg">
+            <h2 class="text-2xl font-playfair text-amber-900 text-center">Ask Tse-AI</h2>
+            <div class="flex gap-2">
+                <input
+                        bind:value={userQuery}
+                        placeholder="Tell me what you're in the mood for..."
+                        class="flex-1 px-4 py-2 rounded-lg border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        on:keydown={(e) => e.key === 'Enter' && getAiRecommendation()}
+                />
+                <Button
+                        on:click={getAiRecommendation}
+                        disabled={isLoading}
+                        class="bg-amber-600 hover:bg-amber-700 transition-colors">
+                    {isLoading ? 'Thinking...' : 'Ask Tse-AI'}
+                </Button>
+            </div>
+            {#if aiRecommendation}
+                <div class="bg-amber-50 p-4 rounded-lg">
+                    <p class="text-amber-900 font-noto">{aiRecommendation}</p>
+                </div>
+            {/if}
+        </div>
+
+        <!-- Rest of the components remain the same -->
         <div class="w-full max-w-4xl grid md:grid-cols-2 gap-8 bg-white rounded-2xl p-6 shadow-lg">
             <!-- Rice Section -->
             <div class="space-y-4">
@@ -109,10 +154,6 @@
 </div>
 
 <style>
-    :global(body) {
-        font-family: 'Noto Sans SC', sans-serif;
-    }
-
     .font-playfair {
         font-family: 'Playfair Display', serif;
     }
