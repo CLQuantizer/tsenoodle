@@ -73,7 +73,7 @@
             <div class="flex gap-2 items-center ">
                 <input
                         bind:value={userQuery}
-                        placeholder={`I'm feeling ${mood}...`}
+                        placeholder={`I'm feeling 「${mood}」...`}
                         class="flex-1 px-4 py-2 rounded-lg border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
                         on:keydown={(e) => e.key === 'Enter' && getAiRecommendation()}
                 />
