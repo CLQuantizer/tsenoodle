@@ -167,7 +167,7 @@
         <footer class="text-center space-y-2 text-amber-800 font-noto">
             <p class="text-lg">Opens daily 12:00-21:00</p>
             <p>Find us at 8 Ship St, Oxford OX1 3DA, United Kingdom</p>
-            <p>Made by Students at <a href="https://www.ox.ac.uk/" target="_blank" class="underline">University of Oxford</a></p>
+            <p>Made with ❤️ by Students at <a href="https://www.ox.ac.uk/" target="_blank" class="underline">University of Oxford</a></p>
         </footer>
     </div>
 </div>
