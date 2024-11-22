@@ -2,6 +2,21 @@
     import {Button} from "$lib/components/ui/button/index";
     import {IMAGE_ALTS, IMAGE_LINKS, MENU, SOCIALS} from "$lib/client/constants";
     import ky from 'ky';
+    import {onMount} from "svelte";
+
+    const wongKarWaiFilms = [
+        "As Tears Go By",
+        "Days of Being Wild",
+        "Chungking Express",
+        "Fallen Angels",
+        "Happy Together",
+        "In the Mood for Love",
+        "My Blueberry Nights",
+        "The Grandmaster"
+    ];
+
+    let mood = "Chungking Express";
+    onMount(() => mood = wongKarWaiFilms[Math.floor(Math.random() * wongKarWaiFilms.length)]);
 
     const rice = MENU.filter(item => item.cat === 'rice')
     const nds = MENU.filter(item => item.cat === 'nd')
@@ -58,7 +73,7 @@
             <div class="flex gap-2 items-center ">
                 <input
                         bind:value={userQuery}
-                        placeholder="In the mood for love?.."
+                        placeholder={`I'm feeling ${mood}...`}
                         class="flex-1 px-4 py-2 rounded-lg border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
                         on:keydown={(e) => e.key === 'Enter' && getAiRecommendation()}
                 />
@@ -152,6 +167,7 @@
         <footer class="text-center space-y-2 text-amber-800 font-noto">
             <p class="text-lg">Opens daily 12:00-21:00</p>
             <p>Find us at 8 Ship St, Oxford OX1 3DA, United Kingdom</p>
+            <p>Made by Students at <a href="https://www.ox.ac.uk/" target="_blank" class="underline">University of Oxford</a></p>
         </footer>
     </div>
 </div>
