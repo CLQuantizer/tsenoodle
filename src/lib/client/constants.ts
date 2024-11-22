@@ -8,7 +8,6 @@ export const MENU = [
     {"cn":"燒鴨飯","en":"Roast Duck Rice","cat":"rice"},
     {"cn":"牛腩飯","en":"Braised Beef Rice","cat":"rice"},
     {"cn":"紅燒肉飯","en":"Braised Pork Belly Rice","cat":"rice"},
-    {"cn":"白飯","en":"White Rice","cat":"rice"},
     {"cn":"牛肉麵","en":"Aromatic Beef Noodle","cat":"nd"},
     {"cn":"重慶小麵（牛）","en":"Chongqing Spicy beef Noodle","cat":"nd"},
     {"cn":"重慶排骨麵","en":"Chongqing Spicy Pork Ribs Noodle","cat":"nd"},
