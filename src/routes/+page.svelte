@@ -81,7 +81,7 @@
                         on:click={getAiRecommendation}
                         disabled={isLoading}
                         class="bg-amber-600 hover:bg-amber-700 transition-colors">
-                    {isLoading ? 'Thinking...' : 'Ask Tse-AI'}
+                    {isLoading ? 'Thinking...' : 'Ask'}
                 </Button>
             </div>
             {#if aiRecommendation}
