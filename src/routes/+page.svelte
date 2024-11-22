@@ -63,7 +63,7 @@
             </h1>
             <p class="text-lg m:text-base md:text-xl text-amber-800 font-noto leading-relaxed">
                 Authentic Chinese cuisine in the heart of Oxford
-                <span class="block text-amber-700">with more than 40 years of history.</span>
+                <span class="block text-amber-700">with more than 45 years of stories.</span>
             </p>
         </header>
 
