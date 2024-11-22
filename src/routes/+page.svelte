@@ -15,7 +15,10 @@
     const randomNoodleDish = () => randomNoodle = nds[Math.floor(Math.random() * nds.length)];
 
     async function getAiRecommendation() {
-        if (!userQuery.trim()) return;
+        if (!userQuery.trim()) {
+            aiRecommendation = 'Please tell vibe me and then I can shill you.';
+            return;
+        }
 
         isLoading = true;
         try {
@@ -43,19 +46,19 @@
             <h1 class="text-5xl md:text-6xl font-playfair text-amber-900 tracking-wide">
                 Tse Noodle
             </h1>
-            <p class="text-lg md:text-xl text-amber-800 font-noto leading-relaxed">
+            <p class="text-lg m:text-base md:text-xl text-amber-800 font-noto leading-relaxed">
                 Authentic Chinese cuisine in the heart of Oxford
                 <span class="block text-amber-700">with more than 40 years of history.</span>
             </p>
         </header>
 
         <!-- Tse-AI Section -->
-        <div class="w-full max-w-2xl space-y-4 bg-white rounded-xl p-6 shadow-lg">
+        <div class="w-full max-w-2xl space-y-4 bg-white rounded-xl m:p-4 shadow-lg">
             <h2 class="text-2xl font-playfair text-amber-900 text-center">Ask Tse-AI</h2>
-            <div class="flex gap-2">
+            <div class="flex gap-2 items-center ">
                 <input
                         bind:value={userQuery}
-                        placeholder="Tell me what you're in the mood for..."
+                        placeholder="In the mood for love?.."
                         class="flex-1 px-4 py-2 rounded-lg border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
                         on:keydown={(e) => e.key === 'Enter' && getAiRecommendation()}
                 />
