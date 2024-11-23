@@ -97,28 +97,6 @@
 
     <!-- Rest of the components remain the same -->
     <div class="w-full max-w-4xl grid md:grid-cols-2 gap-8 bg-white rounded-2xl p-6 shadow-lg">
-        <!-- Rice Section -->
-        <div class="space-y-4">
-            <Button class="w-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:opacity-90 transition-all duration-300"
-                    on:click={randomRiceDish}>
-                Discover a Rice Dish
-            </Button>
-            {#if randomRice}
-                <div class="text-green-700 font-noto text-lg p-3 bg-green-50 rounded-lg text-center">
-                    {randomRice.cn} - {randomRice.en}
-                </div>
-            {/if}
-            <h2 class="font-playfair text-2xl text-amber-900 border-b-2 border-amber-200 pb-2">Rice Dishes</h2>
-            <div class="space-y-2">
-                {#each rice as item}
-                    <div class="font-noto hover:bg-amber-50 p-1 rounded transition-colors">
-                        <span class="text-amber-900">{item.cn}</span>
-                        <span class="block text-amber-700">{item.en}</span>
-                    </div>
-                {/each}
-            </div>
-        </div>
-
         <!-- Noodle Section -->
         <div class="space-y-4">
             <Button class="w-full bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 hover:opacity-90 transition-all duration-300"
@@ -136,6 +114,27 @@
                     <div class="font-noto hover:bg-amber-50 p-2 rounded transition-colors">
                         <span class="text-amber-900">{nd.cn}</span>
                         <span class="block text-amber-700">{nd.en}</span>
+                    </div>
+                {/each}
+            </div>
+        </div>
+        <!-- Rice Section -->
+        <div class="space-y-4">
+            <Button class="w-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:opacity-90 transition-all duration-300"
+                    on:click={randomRiceDish}>
+                Discover a Rice Dish
+            </Button>
+            {#if randomRice}
+                <div class="text-green-700 font-noto text-lg p-3 bg-green-50 rounded-lg text-center">
+                    {randomRice.cn} - {randomRice.en}
+                </div>
+            {/if}
+            <h2 class="font-playfair text-2xl text-amber-900 border-b-2 border-amber-200 pb-2">Rice Dishes</h2>
+            <div class="space-y-2">
+                {#each rice as item}
+                    <div class="font-noto hover:bg-amber-50 p-1 rounded transition-colors">
+                        <span class="text-amber-900">{item.cn}</span>
+                        <span class="block text-amber-700">{item.en}</span>
                     </div>
                 {/each}
             </div>
