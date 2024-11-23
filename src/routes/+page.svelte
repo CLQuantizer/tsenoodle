@@ -54,10 +54,10 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
-<div class="min-h-screen bg-amber-50">
-    <div class="container mx-auto px-4 py-8 flex flex-col items-center gap-8">
+<div class="bg-amber-50">
+    <div class="container mx-auto px-2 py-6 flex flex-col items-center gap-6">
         <!-- Hero Section -->
-        <header class="text-center space-y-4 max-w-2xl">
+        <header class="text-center space-y-4">
             <h1 class="text-5xl md:text-6xl font-playfair text-amber-900 tracking-wide">
                 Tse Noodle
             </h1>
@@ -74,16 +74,19 @@
                 <input
                         bind:value={userQuery}
                         placeholder={`I'm feeling 「${mood}」...`}
-                        class="flex-1 px-4 py-2 rounded-lg border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
+                        class="flex-1 p-2 rounded-lg border border-amber-200 focus:outline-none focus:ring-2 focus:ring-amber-500"
                         on:keydown={(e) => e.key === 'Enter' && getAiRecommendation()}
                 />
                 <Button
                         on:click={getAiRecommendation}
                         disabled={isLoading}
                         class="bg-amber-600 hover:bg-amber-700 transition-colors">
-                    {isLoading ? 'Thinking...' : 'Ask'}
+                    {isLoading ? '...' : 'Ask'}
                 </Button>
             </div>
+            {#if isLoading}
+                <div class="text-center text-amber-900 font-noto">Thinking...</div>
+            {/if}
             {#if aiRecommendation}
                 <div class="bg-amber-50 p-4 rounded-lg">
                     <p class="text-amber-900 font-noto">{aiRecommendation}</p>
