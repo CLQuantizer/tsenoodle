@@ -101,7 +101,7 @@
         <div class="space-y-4">
             <Button class="w-full bg-gradient-to-r from-green-300 via-blue-500 to-purple-600 hover:opacity-90 transition-all duration-300"
                     on:click={randomNoodleDish}>
-                Discover a Noodle Dish
+                Randomize a Noodle Dish
             </Button>
             {#if randomNoodle}
                 <div class="text-green-700 font-noto text-lg p-3 bg-green-50 rounded-lg text-center">
@@ -122,7 +122,7 @@
         <div class="space-y-4">
             <Button class="w-full bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500 hover:opacity-90 transition-all duration-300"
                     on:click={randomRiceDish}>
-                Discover a Rice Dish
+                Randomize a Rice Dish
             </Button>
             {#if randomRice}
                 <div class="text-green-700 font-noto text-lg p-3 bg-green-50 rounded-lg text-center">
@@ -170,7 +170,6 @@
     <footer class="text-center space-y-2 text-amber-800 font-noto">
         <p class="text-lg">Opens daily 12:00-21:00</p>
         <p>Find us at 8 Ship St, Oxford OX1 3DA, United Kingdom</p>
-        <p>Made with ❤️ by Students at <a href="https://www.ox.ac.uk/" target="_blank" class="underline">University of Oxford</a></p>
     </footer>
 </div>
 
