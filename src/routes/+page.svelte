@@ -60,13 +60,13 @@
     <meta property="og:description" content="Meet Tse-AI, your personal menu guide! Experience authentic Chinese cuisine with smart dish recommendations at Oxford's innovative Chinese restaurant. 45+ years of tradition meets AI innovation." />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tsenoodle.com" />
-    <meta property="og:image" content="https://tsenoodle.com/og-image.jpg" />
+    <meta property="og:image" content="https://tsenoodle.com/og-image.png" />
 
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Tse Noodle - Where AI Meets Authentic Chinese Cuisine" />
     <meta name="twitter:description" content="Let Tse-AI guide you through our menu! Traditional Chinese cuisine in Oxford with 45+ years of history, now featuring AI-powered dish recommendations." />
-    <meta name="twitter:image" content="https://tsenoodle.com/twitter-card.jpg" />
+    <meta name="twitter:image" content="https://tsenoodle.com/twitter-card.png" />
 
     <!-- Canonical URL -->
     <link rel="canonical" href="https://tsenoodle.com" />
