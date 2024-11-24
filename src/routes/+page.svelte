@@ -51,6 +51,27 @@
 </script>
 
 <svelte:head>
+    <title>Tse Noodle - AI-Powered Chinese Restaurant in Oxford</title>
+    <meta name="description" content="Experience authentic Chinese cuisine with AI-powered menu recommendations at Tse Noodle in Oxford. Over 45 years of culinary excellence meets modern technology, featuring Tse-AI, your personal dish recommendation assistant." />
+    <meta name="keywords" content="Chinese restaurant Oxford, Tse Noodle, AI restaurant recommendations, Tse-AI, authentic Chinese food, noodles Oxford, Chinese cuisine, AI-powered dining" />
+
+    <!-- Open Graph tags for social media -->
+    <meta property="og:title" content="Tse Noodle - AI-Powered Chinese Restaurant in Oxford" />
+    <meta property="og:description" content="Meet Tse-AI, your personal menu guide! Experience authentic Chinese cuisine with smart dish recommendations at Oxford's innovative Chinese restaurant. 45+ years of tradition meets AI innovation." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tsenoodle.com" />
+    <meta property="og:image" content="https://tsenoodle.com/og-image.jpg" />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tse Noodle - Where AI Meets Authentic Chinese Cuisine" />
+    <meta name="twitter:description" content="Let Tse-AI guide you through our menu! Traditional Chinese cuisine in Oxford with 45+ years of history, now featuring AI-powered dish recommendations." />
+    <meta name="twitter:image" content="https://tsenoodle.com/twitter-card.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://tsenoodle.com" />
+
+    <!-- Existing font link -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
 </svelte:head>
 
