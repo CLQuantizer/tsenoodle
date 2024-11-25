@@ -56,20 +56,20 @@
     <meta name="keywords" content="Chinese restaurant Oxford, Tse Noodle, AI restaurant recommendations, Tse-AI, authentic Chinese food, noodles Oxford, Chinese cuisine, AI-powered dining" />
 
     <!-- Open Graph tags for social media -->
-    <meta property="og:title" content="Tse Noodle - AI-Powered Chinese Restaurant in Oxford" />
-    <meta property="og:description" content="Meet Tse-AI, your personal menu guide! Experience authentic Chinese cuisine with smart dish recommendations at Oxford's innovative Chinese restaurant. 45+ years of tradition meets AI innovation." />
+    <meta property="og:title" content="Tse Noodle - Based Chinese Restaurant in Oxford" />
+    <meta property="og:description" content="Meet Tse-AI, your personal menu guide! Experience authentic Chinese cuisine with smart dish recommendations at Oxford's innovative Chinese restaurant. 45+ years of tradition meets AI innovation. Owned by Tse, who is based" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://tsenoodle.com" />
-    <meta property="og:image" content="https://tsenoodle.com/og-image.png" />
+    <meta property="og:url" content="https://tsenoodle.co.uk" />
+    <meta property="og:image" content="https://tsenoodle.co.uk/og-image.png" />
 
     <!-- Twitter Card tags -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Tse Noodle - Where AI Meets Authentic Chinese Cuisine" />
+    <meta name="twitter:title" content="Tse Noodle - Where AI Meets Authentic Based Chinese Cuisine" />
     <meta name="twitter:description" content="Let Tse-AI guide you through our menu! Traditional Chinese cuisine in Oxford with 45+ years of history, now featuring AI-powered dish recommendations." />
-    <meta name="twitter:image" content="https://tsenoodle.com/twitter-card.png" />
+    <meta name="twitter:image" content="https://tsenoodle.co.uk/twitter-card.png" />
 
     <!-- Canonical URL -->
-    <link rel="canonical" href="https://tsenoodle.com" />
+    <link rel="canonical" href="https://tsenoodle.co.uk" />
 
     <!-- Existing font link -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Noto+Sans+SC:wght@400;500&display=swap" rel="stylesheet">
