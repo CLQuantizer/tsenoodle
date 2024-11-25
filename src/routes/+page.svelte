@@ -132,7 +132,7 @@
             <h2 class="font-playfair text-2xl text-amber-900 border-b-2 border-amber-200 pb-2">Noodle Dishes</h2>
             <div class="space-y-2">
                 {#each nds as nd}
-                    <div class="font-noto hover:bg-amber-50 p-2 rounded transition-colors">
+                    <div class="font-noto p-2 rounded">
                         <span class="text-amber-900">{nd.cn}</span>
                         <span class="block text-amber-700">{nd.en}</span>
                     </div>
