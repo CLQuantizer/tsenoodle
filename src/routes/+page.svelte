@@ -52,12 +52,12 @@
 
 <svelte:head>
     <title>Tse Noodle - AI-Powered Chinese Restaurant in Oxford</title>
-    <meta name="description" content="Experience authentic Chinese cuisine with AI-powered menu recommendations at Tse Noodle in Oxford. Over 45 years of culinary excellence meets modern technology, featuring Tse-AI, your personal dish recommendation assistant." />
+    <meta name="description" content="Experience based Chinese cuisine with AI-powered menu recommendations at Tse Noodle in Oxford. Over 45 years of culinary excellence meets modern technology, featuring Tse-AI, your dish recommendation assistant." />
     <meta name="keywords" content="Chinese restaurant Oxford, Tse Noodle, AI restaurant recommendations, Tse-AI, authentic Chinese food, noodles Oxford, Chinese cuisine, AI-powered dining" />
 
     <!-- Open Graph tags for social media -->
     <meta property="og:title" content="Tse Noodle - Based Chinese Restaurant in Oxford" />
-    <meta property="og:description" content="Meet Tse-AI, your personal menu guide! Experience authentic Chinese cuisine with smart dish recommendations at Oxford's innovative Chinese restaurant. 45+ years of tradition meets AI innovation. Owned by Tse, who is based" />
+    <meta property="og:description" content="Meet Tse-AI, your personal menu guide! Experience authentic Chinese cuisine with smart dish recommendations at Oxford's innovative Chinese restaurant. 45+ years of tradition meets AI innovation" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://tsenoodle.co.uk" />
     <meta property="og:image" content="https://tsenoodle.co.uk/og-image.png" />
