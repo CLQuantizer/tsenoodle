@@ -153,7 +153,7 @@
             <h2 class="font-playfair text-2xl text-amber-900 border-b-2 border-amber-200 pb-2">Rice Dishes</h2>
             <div class="space-y-2">
                 {#each rice as item}
-                    <div class="font-noto hover:bg-amber-50 p-1 rounded transition-colors">
+                    <div class="font-noto p-1 rounded transition-colors">
                         <span class="text-amber-900">{item.cn}</span>
                         <span class="block text-amber-700">{item.en}</span>
                     </div>
