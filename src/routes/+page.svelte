@@ -51,7 +51,7 @@
 </script>
 
 <svelte:head>
-    <title>Tse Noodle - AI-Powered Chinese Restaurant in Oxford</title>
+    <title>Tse Noodle - Family Chinese Restaurant in the heart Oxford</title>
     <meta name="description" content="Experience based Chinese cuisine with AI-powered menu recommendations at Tse Noodle in Oxford. Over 45 years of culinary excellence meets modern technology, featuring Tse-AI, your dish recommendation assistant." />
     <meta name="keywords" content="Chinese restaurant Oxford, Tse Noodle, AI restaurant recommendations, Tse-AI, authentic Chinese food, noodles Oxford, Chinese cuisine, AI-powered dining" />
 
