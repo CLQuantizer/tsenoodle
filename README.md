@@ -1,38 +1,37 @@
-# create-svelte
+# Tsenoodle
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+An AI-powered menu helper for Tse's restaurant near the Bodleian Library in Oxford.
 
-## Creating a project
+## What is this?
 
-If you're seeing this, you've probably already done this step. Congrats!
+Tse himself opened this restaurant, and sometimes people aren't sure what to order. This simple web app helps you choose what to eat using AI - just tell it what you like or what you're in the mood for, and it'll suggest something from the menu.
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
-
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+## Local Development
 
 ```bash
+# Get the code
+git clone https://github.com/CLQuantizer/tsenoodle.git
+cd tsenoodle
+
+# Install stuff
+npm install
+
+# Run it
 npm run dev
 
-# or start the server and open the app in a new browser tab
+# Open in browser
 npm run dev -- --open
 ```
 
-## Building
-
-To create a production version of your app:
+## Build It
 
 ```bash
 npm run build
+npm run preview
 ```
 
-You can preview the production build with `npm run preview`.
+## Want to Help?
 
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+Feel free to open issues or submit pull requests if you find bugs or have ideas for making it better!
+
+Visit the actual app at [tsenoodle.co.uk](https://tsenoodle.co.uk)
