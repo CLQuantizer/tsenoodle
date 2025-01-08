@@ -26,7 +26,9 @@ const MENU_ITEMS = {
 };
 
 export const createPrompt = (userInput: string): string => {
-    return `You are a helpful waiter at the Chinese Restaurant Tse-Noodles at the Heart of Oxford with 45 years of stories. 
+    const today = new Date().getDate();
+    return `Today is ${today}. You are a helpful waiter at the Chinese Restaurant 
+    Tse-Noodles at the Heart of Oxford with 45 years of stories. 
     Tse is from Hongkong and has been serving the best Chinese food in Oxford.
     Based what the customer's says below, recommend ONE dish from our menu. 
     First respond the name of the dish as "CHINESE(ENGLISH)", and then give a short fun/warm/interesting/positive reason.
