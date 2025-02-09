@@ -1,6 +1,7 @@
 import {z} from "zod";
 import {createPrompt, makeGeminiRequest} from "$lib/AI";
 import {json} from "@sveltejs/kit";
+import {AI} from "$env/static/private";
 
 export const POST = async ({request, platform}) => {
     try {
@@ -10,9 +11,8 @@ export const POST = async ({request, platform}) => {
         if (parse.success) {
             input = parse.data;
         }
-        const API_KEY = z.string().parse(platform?.env?.AI);
         const prompt = createPrompt(input);
-        const result = await makeGeminiRequest(prompt, API_KEY) as any;
+        const result = await makeGeminiRequest(prompt, AI) as any;
         const rec = result.candidates[0].content.parts[0].text;
 
         console.log(`Input: ${input}`);

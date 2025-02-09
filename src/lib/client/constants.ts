@@ -31,3 +31,11 @@ export const SOCIALS = [
     {name: 'Facebook', link: 'https://www.facebook.com/tsenoodle'},
     {name: 'TripAdvisor', link: 'https://www.tripadvisor.com/Restaurant_Review-g186361-d17851676-Reviews-Tse_Noodles-Oxford_Oxfordshire_England.html'},
 ]
+
+export const strEqIgnCase = (a: string | null | undefined, b: string | null | undefined): boolean =>
+    !!a && !!b && a.toLowerCase() === b.toLowerCase();
+
+export const enum ENVS {
+    DEV = "dev",
+    PROD = "prod",
+}
