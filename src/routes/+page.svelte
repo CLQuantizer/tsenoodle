@@ -26,6 +26,23 @@
     let aiRecommendation = '';
     let isLoading = false;
 
+    let selectedImage: { src: string; alt: string } | null = null;
+
+    function openDialog(src: string, alt: string) {
+        selectedImage = { src, alt };
+    }
+
+    function closeDialog() {
+        selectedImage = null;
+    }
+
+    // Handle escape key to close dialog
+    function handleKeydown(event: KeyboardEvent) {
+        if (event.key === 'Escape' && selectedImage) {
+            closeDialog();
+        }
+    }
+
     const randomRiceDish = () => randomRice = rice[Math.floor(Math.random() * rice.length)];
     const randomNoodleDish = () => randomNoodle = nds[Math.floor(Math.random() * nds.length)];
 
@@ -49,6 +66,8 @@
         }
     }
 </script>
+
+<svelte:window on:keydown={handleKeydown}/>
 
 <svelte:head>
     <title>Tse Noodle - Family Chinese Restaurant in the heart Oxford</title>
@@ -165,7 +184,13 @@
     <!-- Gallery Section -->
     <div class="w-full grid grid-cols-2 md:grid-cols-4 gap-4">
         {#each IMAGE_LINKS as imageLink, i}
-            <div class="overflow-hidden rounded-xl shadow-lg group">
+            <div
+                    class="overflow-hidden rounded-xl shadow-lg group cursor-pointer"
+                    on:click={() => openDialog(imageLink, IMAGE_ALTS[i])}
+                    on:keypress={(e) => e.key === 'Enter' && openDialog(imageLink, IMAGE_ALTS[i])}
+                    role="button"
+                    tabindex="0"
+            >
                 <img
                         class="w-full h-48 object-cover transform group-hover:scale-110 transition-transform duration-500"
                         src={imageLink}
@@ -174,6 +199,34 @@
             </div>
         {/each}
     </div>
+
+    <!-- Image Dialog -->
+    <!-- Image Dialog -->
+    {#if selectedImage}
+        <div
+                class="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4"
+                on:click={closeDialog}
+                role="dialog"
+                aria-modal="true"
+        >
+            <div
+                    class="relative max-w-4xl w-full h-[80vh] bg-white rounded-lg p-2 flex items-center justify-center"
+                    on:click|stopPropagation={() => {}}
+            >
+                <button
+                        class="absolute top-2 right-2 text-gray-500 hover:text-gray-700 z-10"
+                        on:click={closeDialog}
+                >
+                    ✕
+                </button>
+                <img
+                        src={selectedImage.src}
+                        alt={selectedImage.alt}
+                        class="max-h-full max-w-full object-contain rounded"
+                />
+            </div>
+        </div>
+    {/if}
 
     <!-- Social Links -->
     <div class="flex gap-4 justify-center w-full my-6">
