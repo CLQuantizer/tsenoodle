@@ -1,4 +1,4 @@
-import ky from 'ky';
+import {z} from "zod";
 
 const MENU_ITEMS = {
     rice: [
@@ -27,28 +27,18 @@ const MENU_ITEMS = {
 
 export const createPrompt = (userInput: string): string => {
     const today = new Date().getDate();
-    return `Today is ${today}. You are a helpful waiter at the Chinese Restaurant 
-    Tse-Noodles at the Heart of Oxford with 45 years of stories. 
-    Tse is from Hongkong and has been serving the best Chinese food in Oxford.
-    Based what the customer's says below, recommend ONE dish from our menu. 
-    First respond the name of the dish as "CHINESE(ENGLISH)", and then give a short fun/warm/interesting/positive reason.
+    return `Today is ${today}.
         Menu:
         Rice Dishes:
         ${MENU_ITEMS.rice.join('\n')}
         
         Noodle Dishes:
         ${MENU_ITEMS.noodles.join('\n')}
-        Customer says: "${userInput}"`;
+        Customer says: "${userInput}"
+        Please recommend a dish from the menu.`;
     };
 
-export const makeGeminiRequest = async (prompt: string, apiKey: string) => {
-    const response = await ky.post(
-        'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent',
-        {
-            json: {contents: [{parts: [{text: prompt}]}]},
-            searchParams: {key: apiKey},
-            headers: {'Content-Type': 'application/json'}
-        }
-    );
-    return await response.json();
-}
+export const recommendationSchema = z.object({
+    recommendation: z.string(),
+    reason: z.string()
+});

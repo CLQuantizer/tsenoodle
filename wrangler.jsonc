@@ -1,0 +1,14 @@
+{
+	"$schema": "node_modules/wrangler/config-schema.json",
+	"name": "tsenoodle",
+	"main": "src/index.ts",
+	"compatibility_flags": ["nodejs_compat"],
+	"compatibility_date": "2024-10-22",
+	"observability": {
+		"enabled": true
+	},
+	"vars": { "REG_RESEARCHER_URL": "https://watch.gongxifacai.workers.dev" },
+	"ai": {
+		"binding": "AI"
+	}
+}
